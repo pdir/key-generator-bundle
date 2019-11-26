@@ -57,9 +57,9 @@ class KeyGenerator extends \Backend
      */
     public function getWizard()
     {
-        $GLOBALS['TL_JAVASCRIPT']['KeyGenerator'] = 'bundles/pdirkeygeneratorbundle/scripts/KeyGenerator.js';
+        $GLOBALS['TL_JAVASCRIPT']['KeyGenerator'] = 'bundles/pdirkeygenerator/scripts/KeyGenerator.js';
         $GLOBALS['TL_MOOTOOLS']['KeyGenerator'] = '<script>var REQUEST_TOKEN="'.REQUEST_TOKEN.'"</script>';
 
-        return 	'<img src="bundles/pdirkeygeneratorbundle/media/icon.gif" width="20" height="20" style="vertical-align:-6px;cursor:pointer" class="keygenerator" title="'.$GLOBALS['TL_LANG']['MSC']['keygenerator'].'">';
+        return 	'<img src="bundles/pdirkeygenerator/media/icon.gif" width="20" height="20" style="vertical-align:-6px;cursor:pointer" class="keygenerator" title="'.$GLOBALS['TL_LANG']['MSC']['keygenerator'].'">';
     }
 }
