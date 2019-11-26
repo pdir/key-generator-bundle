@@ -1,6 +1,6 @@
-# Contao3 Key Generator Wizard
+# Contao 4 Key Generator Wizard
 
-This extension is for Contao 3 and enhances the BE TextField Widget with a keyGenerator Wizard
+This extension is for Contao 4 and enhances the BE TextField Widget with a keyGenerator Wizard
 See example:
 
 ```php
@@ -11,9 +11,9 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['apikey'] = array
 	'exclude'       => true,
 	'search'        => false,
 	'inputType'     => 'text',
-	'wizard'				=> array(array('\KeyGenerator\KeyGenerator','getWizard')),
-	'save_callback'	=> array(array('\KeyGenerator\KeyGenerator','setKeyIfEmpty')),
-	'eval'          => array('maxlength'=>32, 'feEditable'=>false, 'feViewable'=>false, 'feGroup'=>'rpc', 'tl_class'=>'w50 wizard'),
+	'wizard'		=> [['\Pdir\KeyGeneratorBundle\KeyGenerator','getWizard']],
+	'save_callback'	=> [['\Pdir\KeyGeneratorBundle\KeyGenerator','setKeyIfEmpty']],
+	'eval'          => ['maxlength'=>32, 'feEditable'=>false, 'feViewable'=>false, 'feGroup'=>'rpc', 'tl_class'=>'w50 wizard'],
 	'sql'           => "varchar(32) NOT NULL default ''"
 );
 
@@ -42,3 +42,5 @@ public function generateKey($strFieldName, $intLength)
   return false;
 }
 ```
+
+Original by [Sebastian Tilch 2012](https://github.com/mediabakery/contao-KeyGenerator) for Contao 3
