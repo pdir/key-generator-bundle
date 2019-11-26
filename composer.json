@@ -3,7 +3,7 @@
     "type": "contao-bundle",
     "description": "Key Generator Wizard for Contao 4",
     "homepage": "https://pdir.de",
-    "license": "LGPL",
+    "license": "LGPL-3.0+",
     "authors": [
         {
             "name": "Sebastian Tilch",
